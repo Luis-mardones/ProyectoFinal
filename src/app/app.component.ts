@@ -12,11 +12,6 @@ export class AppComponent {
     descripcionProducto = '';
      precioProducto = '';
 
-     idInsert = '';
-     codeInsert = '';
-     descripcionInsert = '';
-     precioInsert = '';
-
 
       constructor(private http: Http) {}
 
@@ -37,24 +32,5 @@ export class AppComponent {
              // https://materializecss.com/
            }
        );
-     }
-
-     insertIndicator() {
-      this.http.get('http://localhost:8080/api/products')
-       .subscribe(
-        (res: Response) => {
-          const datos = res.json();
-          console.log(datos);
-          this.descripcionProducto = datos['description'];
-          this.precioProducto = datos['precio'];
-           }, err => {
-            console.log('UPS!');
-            console.log(err);
-         }, () => {
-           console.log('¡Servicio Finalizado!');
-           // https://angular.io/guide/quickstart
-           // https://materializecss.com/
-         }
-     );
    }
 }

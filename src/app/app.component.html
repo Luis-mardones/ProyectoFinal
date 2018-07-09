@@ -1,4 +1,3 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
     Bienvenido {{ title }}!
@@ -15,25 +14,4 @@
   <h2>Producto: {{descripcionProducto}}</h2>
   <br>
   <h2>Precio: {{precioProducto}}</h2>
-</div>
-<br>
-<h2>Registrar un producto:</h2>
-<div>
-  <label>Id del producto:
-    <input [(ngModel)]="idInsert" placeholder="ID">
-  </label>
-  <br>
-  <label>Codigo del producto:
-    <input [(ngModel)]="codeInsert" placeholder="Code">
-  </label>
-  <br>
-  <label>Nombre del Producto:
-    <input [(ngModel)]="descripcionInsert" placeholder="Nombre">
-  </label>
-  <br>
-  <label>Precio del producto:
-    <input [(ngModel)]="precioInsert" placeholder="Precio">
-  </label>
-  <br>
-  <button (click)=insertIndicator()>Registrar</button>
 </div>
